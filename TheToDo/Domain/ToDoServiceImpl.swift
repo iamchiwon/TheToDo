@@ -8,12 +8,21 @@
 import Foundation
 
 class ToDoServiceImpl: ToDoService {
+    private var todoItems: [ToDo] = []
+    
     func create(title: String) {
+        let todo = ToDo(id: UUID().uuidString,
+                        title: title,
+                        done: false,
+                        createdAt: Date())
+        todoItems.append(todo)
     }
 
     func count() -> Int {
+        return todoItems.count
     }
 
-    func item(at: Int) -> ToDo {
+    func item(at index: Int) -> ToDo {
+        return todoItems[index]
     }
 }
