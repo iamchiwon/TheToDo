@@ -9,7 +9,7 @@ import Foundation
 
 class ToDoServiceImpl: ToDoService {
     private var todoItems: [ToDo] = []
-    
+
     func create(title: String) {
         let todo = ToDo(id: UUID().uuidString,
                         title: title,
@@ -24,5 +24,10 @@ class ToDoServiceImpl: ToDoService {
 
     func item(at index: Int) -> ToDo {
         return todoItems[index]
+    }
+}
+
+extension ToDoServiceImpl: Toggable {
+    func toggle(withId id: String) {
     }
 }
