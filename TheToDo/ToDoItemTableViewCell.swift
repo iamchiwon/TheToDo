@@ -20,8 +20,13 @@ class ToDoItemTableViewCell: UITableViewCell {
             formatter.dateFormat = "yyyy.MM.dd HH:mm:ss"
 
             itemTitle.text = newValue.title
+            isDone.isOn = newValue.done
             updatedAt.text = formatter.string(from: newValue.createdAt)
             self.todo = newValue
         }
+    }
+
+    @IBAction func onToggle() {
+        // TODO: toggle todo
     }
 }
