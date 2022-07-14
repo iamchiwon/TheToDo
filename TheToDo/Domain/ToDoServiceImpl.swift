@@ -12,11 +12,11 @@ class ToDoServiceImpl: ToDoService {
 
     init(repository: Repository) {
         self.repository = repository
-        // TODO : load
+        todoItems = repository.load()
     }
 
     deinit {
-        // TODO : save
+        repository.save(todos: todoItems)
     }
 
     private var todoItems: [ToDo] = []
