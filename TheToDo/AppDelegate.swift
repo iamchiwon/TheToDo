@@ -4,10 +4,13 @@
 //
 //
 
+import Swinject
 import UIKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
+    let container = Container()
+
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         return true
     }
