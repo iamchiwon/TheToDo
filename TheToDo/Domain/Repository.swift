@@ -8,4 +8,6 @@
 import Foundation
 
 protocol Repository {
+    func load() -> [ToDo]
+    func save(todos: [ToDo])
 }
