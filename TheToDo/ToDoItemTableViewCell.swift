@@ -6,6 +6,10 @@
 
 import UIKit
 
+protocol Toggable: AnyObject {
+    func toggle(withId id: String)
+}
+
 class ToDoItemTableViewCell: UITableViewCell {
     @IBOutlet var isDone: UISwitch!
     @IBOutlet var itemTitle: UILabel!
@@ -26,7 +30,9 @@ class ToDoItemTableViewCell: UITableViewCell {
         }
     }
 
+    weak var toggable: Toggable?
+
     @IBAction func onToggle() {
-        // TODO: toggle todo
+        toggable?.toggle(withId: todo.id)
     }
 }
