@@ -15,24 +15,21 @@ class ToDoItemTableViewCell: UITableViewCell {
     @IBOutlet var itemTitle: UILabel!
     @IBOutlet var updatedAt: UILabel!
     
-    var todo: ToDo {
-        get {
-            self.todo
-        }
-        set {
+    var todo: ToDo? {
+        didSet {
+            guard let todo = todo else { return }
             let formatter = DateFormatter()
             formatter.dateFormat = "yyyy.MM.dd HH:mm:ss"
 
-            itemTitle.text = newValue.title
-            isDone.isOn = newValue.done
-            updatedAt.text = formatter.string(from: newValue.createdAt)
-            self.todo = newValue
+            itemTitle.text = todo.title
+            updatedAt.text = formatter.string(from: todo.createdAt)
         }
     }
 
     weak var toggable: Toggable?
 
     @IBAction func onToggle() {
+        guard let todo = todo else { return }
         toggable?.toggle(withId: todo.id)
     }
 }
