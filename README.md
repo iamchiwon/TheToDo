@@ -9,3 +9,7 @@ let us: Go! 2022 summer
 - UI구성과정은 commit으로 표현하지 않았습니다.
 - commit 단위로 코드가 진행되는 과정을 보시면 됩니다.
 - Protocol 을 우선해서 만들고, 나중에 구현을 해가는 과정을 보여줍니다.
+
+## Links
+
+- [Slide](https://www.slideshare.net/ChiwonSong/20220716pop)
