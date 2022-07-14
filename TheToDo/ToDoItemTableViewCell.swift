@@ -22,6 +22,7 @@ class ToDoItemTableViewCell: UITableViewCell {
             formatter.dateFormat = "yyyy.MM.dd HH:mm:ss"
 
             itemTitle.text = todo.title
+            isDone.isOn = todo.done
             updatedAt.text = formatter.string(from: todo.createdAt)
         }
     }

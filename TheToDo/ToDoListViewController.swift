@@ -6,8 +6,10 @@
 
 import UIKit
 
+typealias ToDoToggableService = ToDoService & Toggable
+
 class ToDoListViewController: UITableViewController {
-    let service: ToDoService = ToDoServiceImpl(repository: UserDefaultRepository()) // TODO: DI
+    let service: ToDoToggableService = ToDoServiceImpl(repository: UserDefaultRepository()) // TODO: DI
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +38,7 @@ extension ToDoListViewController {
         let index = indexPath.row
         let item = service.item(at: index)
         cell.todo = item
+        cell.toggable = service
 
         return cell
     }
