@@ -27,3 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
     }
 }
+
+func Inject<Service>(_ serviceType: Service.Type) -> Service? {
+    (UIApplication.shared.delegate as? AppDelegate)?.container.resolve(serviceType)
+}
