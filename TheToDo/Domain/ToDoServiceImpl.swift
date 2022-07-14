@@ -29,5 +29,11 @@ class ToDoServiceImpl: ToDoService {
 
 extension ToDoServiceImpl: Toggable {
     func toggle(withId id: String) {
+        if let found = todoItems.enumerated().first(where: { $0.element.id == id }) {
+            let index = found.offset
+            var todo = found.element
+            todo.done = !todo.done
+            todoItems[index] = todo
+        }
     }
 }
