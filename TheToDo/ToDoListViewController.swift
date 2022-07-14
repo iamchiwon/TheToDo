@@ -35,6 +35,7 @@ extension ToDoListViewController {
 
         let index = indexPath.row
         let item = service.item(at: index)
+        cell.todo = item
 
         return cell
     }
