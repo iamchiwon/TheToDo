@@ -7,7 +7,7 @@
 import UIKit
 
 class ToDoListViewController: UITableViewController {
-    var todoItems: [(title: String, createdAt: Date)] = []
+    let service: ToDoService
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,7 +16,7 @@ class ToDoListViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "CreateNewItem", let toVC = segue.destination as? AddItemViewController {
             toVC.createdItem = { [weak self] title, createdAt in
-                self?.todoItems.append((title, createdAt))
+                // TODO: create
                 self?.tableView.reloadData()
             }
         }
@@ -25,7 +25,7 @@ class ToDoListViewController: UITableViewController {
 
 extension ToDoListViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        todoItems.count
+        // TODO: get count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -33,12 +33,7 @@ extension ToDoListViewController {
             fatalError("tableViewCell has not dequeued!")
         }
 
-        let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy.MM.dd HH:mm:ss"
-
-        let item = todoItems[indexPath.row]
-        cell.itemTitle.text = item.title
-        cell.updatedAt.text = formatter.string(from: item.createdAt)
+        let item = // TODO get item
 
         return cell
     }
