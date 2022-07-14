@@ -15,7 +15,7 @@ class ToDoServiceImpl: ToDoService {
         todoItems = repository.load()
     }
 
-    deinit {
+    private func save() {
         repository.save(todos: todoItems)
     }
 
@@ -27,6 +27,7 @@ class ToDoServiceImpl: ToDoService {
                         done: false,
                         createdAt: Date())
         todoItems.append(todo)
+        save()
     }
 
     func count() -> Int {
@@ -45,6 +46,7 @@ extension ToDoServiceImpl: Toggable {
             var todo = found.element
             todo.done = !todo.done
             todoItems[index] = todo
+            save()
         }
     }
 }
