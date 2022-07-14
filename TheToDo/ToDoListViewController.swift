@@ -9,7 +9,7 @@ import UIKit
 typealias ToDoToggableService = ToDoService & Toggable
 
 class ToDoListViewController: UITableViewController {
-    let service: ToDoToggableService = ToDoServiceImpl(repository: UserDefaultRepository()) // TODO: DI
+    let service = Inject(ToDoToggableService.self)!
 
     override func viewDidLoad() {
         super.viewDidLoad()
