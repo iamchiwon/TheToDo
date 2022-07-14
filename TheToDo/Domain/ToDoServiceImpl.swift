@@ -8,6 +8,17 @@
 import Foundation
 
 class ToDoServiceImpl: ToDoService {
+    private let repository: Repository
+
+    init(repository: Repository) {
+        self.repository = repository
+        todoItems = repository.load()
+    }
+
+    deinit {
+        repository.save(todos: todoItems)
+    }
+
     private var todoItems: [ToDo] = []
 
     func create(title: String) {
