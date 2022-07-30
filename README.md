@@ -13,6 +13,7 @@ let us: Go! 2022 summer
 ## Links
 
 - [Slide](https://www.slideshare.net/ChiwonSong/20220716pop)
+- [Video](https://youtu.be/q_mPAZB3RQY)
 
 
 ## Documetation 
@@ -349,12 +350,5 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 
 [https://developer.apple.com/videos/play/wwdc2015/408/
 ](https://developer.apple.com/videos/play/wwdc2015/408/)
-
-
-
-
-
-
-
 
 
