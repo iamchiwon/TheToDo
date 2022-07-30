@@ -15,8 +15,11 @@ let us: Go! 2022 summer
 - [Slide](https://www.slideshare.net/ChiwonSong/20220716pop)
 - [Video](https://youtu.be/q_mPAZB3RQY)
 
-
 ## Documetation 
+
+<details>
+  <summary><a href="https://github.com/kickbell/TheToDo">kickbell 님 피드백</a></summary>
+  <p>
 
 이 글은 [let us:Go! 2022 Summer](https://let-us-go-2022-summer.vercel.app/) 에서 발표된 [곰튀김](https://github.com/iamchiwon)님의 [만들면서 느껴보는 POP](https://www.youtube.com/watch?v=q_mPAZB3RQY&list=LL&index=3&t=25s)를 글로 정리한 것입니다. 샘플코드는 [여기](https://github.com/iamchiwon/TheToDo), 슬라이드는 [여기](https://www.slideshare.net/ChiwonSong/20220716pop)에 있으니 보시는데 참고하시기 바랍니다. 
 
@@ -351,4 +354,5 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 [https://developer.apple.com/videos/play/wwdc2015/408/
 ](https://developer.apple.com/videos/play/wwdc2015/408/)
 
-
+  </p>
+</details>
