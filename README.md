@@ -13,3 +13,4 @@ let us: Go! 2022 summer
 ## Links
 
 - [Slide](https://www.slideshare.net/ChiwonSong/20220716pop)
+- [Video](https://youtu.be/q_mPAZB3RQY)
